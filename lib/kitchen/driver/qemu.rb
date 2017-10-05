@@ -328,7 +328,7 @@ EOS
           if state[:acpi_poweroff]
             info 'Sending ACPI poweroff..'
             mon.execute('system_powerdown')
-            mon.wait_for_eof(30)
+            mon.wait_for_eof(120)
           else
             info 'Quitting QEMU..'
             mon.execute('quit')
